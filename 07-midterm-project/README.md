@@ -105,14 +105,17 @@ Once the service is running (either via Docker or manually), you can test the pr
 This script will send a sample order to the prediction service and print the JSON response.
 
 **Example Response:**
- ```json
-    {"delivery_time_minutes": 28.35}
-    ```
-
+```json
+{"delivery_time_minutes": 28.35}
+```
 
 ## Image of how you interact with the deployed service
 
-Can be found here [test.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/test.ipynb)
+Can be found here: [test.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/test.ipynb)
 
-Process of training and finding the best model for the task can be found here [midterm-project.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/midterm-project.ipynb)
+## Model Training Process
+
+The process of training and finding the best model for the task can be found here: [midterm-project.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/midterm-project.ipynb)
+
+
 
