@@ -2,13 +2,13 @@
 
 This project focuses on predicting the time required for a courier to deliver an order. By analyzing various features related to the order, courier, and environmental conditions, the model provides an estimated delivery time in minutes.
 
-The primary goal was to explore the factors that significantly influence delivery time and to build an effective regression model using XGBoost.
+The primary goal was to explore the factors that influence delivery time and to build an effective regression model using XGBoost.
 
 The final model is an **XGBoost Regressor**, which achieved a **Root Mean Squared Error (RMSE) of 3,7 minutes** on the test set.
 
 ## Dataset
 
-The model was trained on the [Food-Delivery dataset](https://huggingface.co/datasets/aneesarom/Food-Delivery) from Hugging Face. This dataset contains anonymized, real-world data from a food delivery service and is conveniently pre-split into training and test sets.
+The model was trained on the [Food-Delivery dataset](https://huggingface.co/datasets/aneesarom/Food-Delivery) from Hugging Face. This dataset contains anonymized, real-world data from a food delivery service.
 
 ## Features
 
@@ -61,17 +61,6 @@ The project includes a `Dockerfile` to easily build and run the prediction servi
     ```
     The prediction service is now running and accessible at `http://localhost:9696`.
 
-4.  **Test the Service**
-    Run the test script.
-    ```bash
-    python test.py
-    ```
-    The script will send a request to the service you started before and print the response.
-
-    **Example Response:**
-    ```json
-    {"delivery_time_minutes": 28.35}
-    ```
 
 ### Option 2: Manual Setup
 
@@ -95,13 +84,7 @@ Follow these instructions to set up the environment, train the model, and run th
     pipenv install
     ```
 
-3.  **Train the Model**
-    The `train.py` script handles data preprocessing and model training. Run it to generate the `model_eta=0.1_max_depth=10_min_child_weight=1.bin` artifact:
-    ```bash
-    pipenv run python train.py
-    ```
-
-4.  **Run the Prediction Service**
+3.  **Run the Prediction Service**
     Start the Flask service using Gunicorn:
     ```bash
     pipenv run gunicorn --bind 0.0.0.0:9696 predict:app
@@ -123,12 +106,14 @@ This script will send a sample order to the prediction service and print the JSO
 
 **Example Response:**
 ```json
-{
-  "delivery_time_minutes": 28.5
-}
+  {'delivery_time_prediction_in_min': 21.95}
+    Will be at the address in 23.0 minutes
 ```
 
 
+## Image of how you interact with the deployed service
 
+Can be found here [test.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/test.ipynb)
 
+Process of training and finding the best model for the task can be found here [midterm-project.ipynb](https://github.com/polina-fuksman/machine-learning-zoomcamp/blob/main/07-midterm-project/midterm-project.ipynb)
 
