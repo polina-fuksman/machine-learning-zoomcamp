@@ -105,10 +105,9 @@ Once the service is running (either via Docker or manually), you can test the pr
 This script will send a sample order to the prediction service and print the JSON response.
 
 **Example Response:**
-```json
-  {'delivery_time_prediction_in_min': 21.95}
-    Will be at the address in 23.0 minutes
-```
+ ```json
+    {"delivery_time_minutes": 28.35}
+    ```
 
 
 ## Image of how you interact with the deployed service
